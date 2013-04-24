@@ -1,0 +1,11 @@
+HOW TO TEST XSLT-BLOG:
+----------------------
+* execute script gener_article.pl to generate specific
+  number of articles (all articles will be generate in
+  directory ./xml/articles/)
+* execute scipt gener_article_list.pl to generate article
+  list for specific number of articles and categories
+  (article list will be generate in directory./xml)
+* copy generated articles into the directory
+   ../xml/articles/
+* copy generated article list into the directory ../xml/

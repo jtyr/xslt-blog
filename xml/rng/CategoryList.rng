@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  **********************************************************
+  ** Description: RELAX-NG scheme for validation of
+  **              file xml/CategoryList.xml
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+  <start>
+    <element name="category_list">
+        <ref name="container-choice"/>
+    </element>
+  </start>
+
+  <define name="container-choice">
+    <oneOrMore>
+      <choice>
+        <ref name="category-element"/>
+      </choice>
+    </oneOrMore>
+  </define>
+
+  <define name="category-element">
+    <grammar>
+      <start>
+        <element name="category">
+          <attribute name="id">
+            <data type="string">
+	      <param name="pattern">[a-zA-Z0-9]{1,255}</param>
+	    </data>
+          </attribute>
+          <attribute name="name">
+            <data type="string">
+	      <param name="minLength">1</param>
+	      <param name="maxLength">255</param>
+	    </data>
+          </attribute>
+          <optional>
+            <parentRef name="container-choice"/>
+          </optional>
+        </element>
+      </start>
+    </grammar>
+  </define>
+ 
+</grammar>

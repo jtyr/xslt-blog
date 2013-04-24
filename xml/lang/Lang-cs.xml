@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+  **********************************************************
+  ** Description: Czech texts
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+
+<lang_text>
+  <text id="categories">Kategorie</text>
+  <text id="calendar">Kalendář</text>
+  <text id="quick_links">Rychlé odkazy</text>
+  <text id="lang_separator"> . </text>
+  <text id="number_of_articles">Počet článků: </text>
+  <text id="listing_page">Strana </text>
+  <text id="listing_page_of"> z </text>
+  <text id="listing_go">Jdi</text>
+  <text id="list_info_date">Datum: </text>
+  <text id="list_info_category">Kategorie: </text>
+  <text id="list_read_more">celý článek</text>
+  <text id="list_article_lang">Jazyk: </text>
+  <text id="list_no_articles">Žádné články</text>
+  <text id="navigation">Navigace</text>
+  <text id="navigation_back">Zpět</text>
+  <text id="wrong_article">Chybný článek</text>
+  <text id="powered_by">Poháněno </text>
+  <text id="version">Verze </text>
+  <text id="loading_calendar">Načítám kalendář...</text>
+</lang_text>

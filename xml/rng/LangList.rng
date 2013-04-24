@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  **********************************************************
+  ** Description: RELAX-NG scheme for validation of
+  **              file xml/LanguageList.xml
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+<!--
+### command for generation of list of all languages:
+$ cat /usr/share/X11/locale/locale.alias | grep -v '^#' | grep -v '^$' | awk '{print($2)}' | sed 's/_.*//' | sort | uniq | grep -v '^C$' | awk '{print("          <value>"$0"</value>")}'
+$ cat /usr/share/X11/locale/locale.alias | grep -v '^#' | grep -v '^$' | awk '{print($2)}' | sed 's/.._//' | sed 's/\..*//' | awk '{print(tolower($0))}' | grep -v '^c$' | sort | uniq | awk '{print("          <value>"$0"</value>")}'
+-->
+
+<element name="lang_list" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+  <oneOrMore>
+    <element name="lang">
+
+      <attribute name="id">
+        <data type="language">
+          <param name="minLength">2</param>
+          <param name="maxLength">2</param>
+        </data>
+      </attribute>
+
+      <attribute name="flag">
+        <data type="language">
+          <param name="minLength">2</param>
+          <param name="maxLength">2</param>
+        </data>
+      </attribute>
+
+      <attribute name="name">
+        <data type="string">
+	  <param name="minLength">1</param>
+	  <param name="maxLength">255</param>
+	</data>
+      </attribute>
+
+    </element>
+  </oneOrMore>
+
+</element>

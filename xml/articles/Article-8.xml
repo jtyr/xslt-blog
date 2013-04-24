@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<article lang="en">
+	<title>Article 8</title>
+	<text>
+
+<abstract>
+	The translate <b>function</b> returns <i>the first</i> argument <u>string
+	with</u> occurrences of <img class="Nob" src="./xml/articles/files/homeicon.gif"
+	alt="Image"/> characters
+</abstract>
+
+<pre>
+var i = 1;
+var j = 1;
+alert(i);
+alert(j);
+</pre>
+
+in the second argument string replaced by the character at the <a
+href="http://www.w3c.org" title="W3C">corresponding</a> position in the third
+argument string. For example, <code>translate("bar","abc","ABC")</code> returns
+the string BAr. If there is a character in the second argument string with no
+character at a corresponding position in the third argument string (because the
+second argument string is longer than the third argument string), then
+occurrences of that character in the first argument string are removed. For
+example, <code>translate("-aaa-","abc-","ABC")</code> returns
+<code>"AAA"</code>. If a character occurs more than once in the second argument
+string, then the first occurrence determines the replacement character. If the
+third argument string is longer than the second argument string, then excess
+characters are ignored.
+
+	</text>
+</article>

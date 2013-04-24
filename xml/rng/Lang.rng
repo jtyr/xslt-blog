@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  **********************************************************
+  ** Description: RELAX-NG scheme for validation of
+  **              file xml/lang/Lang-**.xml
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+<element name="lang_text" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+  <group>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>categories</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>calendar</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>quick_links</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>lang_separator</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>number_of_articles</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>listing_page</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>listing_page_of</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>listing_go</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>list_info_date</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>list_info_category</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>list_read_more</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>list_article_lang</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>list_no_articles</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>navigation</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>navigation_back</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>wrong_article</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>powered_by</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>version</value>
+      </attribute>
+    </element>
+    <element name="text">
+      <text/>
+      <attribute name="id">
+	<value>loading_calendar</value>
+      </attribute>
+    </element>
+  </group>
+
+</element>

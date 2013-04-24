@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+  **********************************************************
+  ** Description: English texts
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+
+<lang_text>
+  <text id="categories">Categories</text>
+  <text id="calendar">Calendar</text>
+  <text id="quick_links">Quick links</text>
+  <text id="lang_separator"> . </text>
+  <text id="number_of_articles">Number of articles: </text>
+  <text id="listing_page">Page </text>
+  <text id="listing_page_of"> of </text>
+  <text id="listing_go">Go</text>
+  <text id="list_info_date">Date: </text>
+  <text id="list_info_category">Category: </text>
+  <text id="list_read_more">read more</text>
+  <text id="list_article_lang">Language: </text>
+  <text id="list_no_articles">No articles</text>
+  <text id="navigation">Navigation</text>
+  <text id="navigation_back">Back</text>
+  <text id="wrong_article">Wrong article</text>
+  <text id="powered_by">Powered by </text>
+  <text id="version">Version </text>
+  <text id="loading_calendar">Loading calendar...</text>
+</lang_text>

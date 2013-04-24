@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+  **********************************************************
+  ** Description: Language list definition
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+
+<lang_list>
+  <lang id="en" flag="us" name="English"/>
+  <lang id="cs" flag="cz" name="Česky"/>
+</lang_list>

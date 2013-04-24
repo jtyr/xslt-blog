@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  **********************************************************
+  ** Description: RELAX-NG scheme for validation of
+  **              file xml/ArticleList.xml
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+<element name="article_list" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+  <oneOrMore>
+    <element name="a">
+
+      <attribute name="d">
+        <data type="string">
+	  <param name="pattern">\d{2}\.\d{2}\.\d{4} \d{2}:\d{2}:\d{2}</param>
+	</data>
+      </attribute>
+
+      <attribute name="i">
+	<data type="string">
+	  <param name="pattern">[a-zA-Z0-9]{1,255}</param>
+	</data>
+      </attribute>
+
+      <optional>
+        <attribute name="q">
+	  <value>1</value>
+	</attribute>
+      </optional>
+
+      <zeroOrMore>
+	<element name="c">
+
+	  <attribute name="i">
+	    <data type="string">
+	      <param name="pattern">[a-zA-Z0-9]{1,255}</param>
+	    </data>
+	  </attribute>
+
+	</element>
+      </zeroOrMore>
+
+    </element>
+  </oneOrMore>
+
+</element>

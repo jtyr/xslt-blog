@@ -1,0 +1,358 @@
+/*
+  **********************************************************
+  ** Description: General stylesheet
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+*/
+
+body {
+	background-color: gray;
+	margin: 0;
+	padding: 0 10px 0 10px;
+	font-family: "Arial CE", "Helvetica CE", Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+body[class] #Page {
+	width: auto;
+}
+
+#Page {
+	border: 2px solid silver;
+	width: 900px;
+	min-width: 900px;
+	max-width: 60em;
+	margin: 10px auto 10px auto;
+	text-align: left;
+	background-color: #e9e9e9;
+	padding-top: 1px;
+	-moz-border-radius: 20px;
+}
+
+/* ------------------------------------------ */
+
+a {
+	color: black;
+	background-color: inherit;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+/* ------------------------------------------ */
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	margin: 0;
+}
+
+h3 a {
+	color: black;
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+}
+
+/* ------------------------------------------ */
+
+.Clear {
+	clear: both;
+}
+
+.Center {
+	text-align: center;
+}
+
+.Italic {
+	font-style: italic;
+}
+
+.Bold {
+	font-weight: bold;
+}
+
+/* ------------------------------------------ */
+
+#Done {
+	display: none;
+}
+
+#Wait {
+	display: none;
+	font-style: italic;
+	text-align: center;
+}
+
+#Cook {
+	display: none;
+	font-weight: bold;
+	text-align: center;
+}
+
+#Xslt {
+	display: none;
+	text-align: center;
+}
+
+/* ------------------------------------------ */
+
+#Header {
+	margin-bottom: 15px;
+	border-bottom: 2px solid silver;
+	background-color: black;
+	color: white;
+	-moz-border-radius-topleft: 18px;
+	-moz-border-radius-topright: 18px;
+}
+
+#Header .BlogName a {
+	padding: 25px 0 20px 30px;
+	float: left;
+	font-weight: bold;
+	font-size: 18pt;
+	font-style: italic;
+	color: white;
+	text-decoration: none;
+}
+
+#Header .BlogName a:hover {
+	color: #ffd66e;
+}
+
+#Header .Lang {
+	float: right;
+	padding: 5px 12px 0 0;
+}
+
+#Header .Lang ul {
+	margin: 0;
+	padding: 0;
+}
+
+#Header .Lang li {
+	font-size: 8pt;
+	display: inline;
+	color: silver;
+}
+
+#Header .Lang li span {
+	font-weight: normal;
+}
+
+#Header .Lang li a {
+	text-decoration: none;
+	color: silver;
+}
+
+#Header .Lang li a:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+/* ------------------------------------------ */
+
+#Footer {
+	margin-top: 15px;
+	padding: 10px 15px 10px 15px;
+	color: silver;
+	background-color: black;
+	border-top: 2px solid silver;
+	clear: both;
+	font-size: 8pt;
+	-moz-border-radius-bottomleft: 18px;
+	-moz-border-radius-bottomright: 18px;
+}
+
+#Footer .Powered {
+	float: left;
+}
+
+#Footer .Powered a {
+	color: white;
+	text-decoration: none;
+}
+
+#Footer .Powered a:hover {
+	color: #ffd66e;
+}
+
+#Footer .Version {
+	float: right;
+	text-align: right;
+}
+
+/* ------------------------------------------ */
+
+#MenuPanel {
+	width: 200px;
+	float: left;
+	margin: 0;
+}
+
+/* ------------------------------------------ */
+
+.Menu {
+	background-color: white;
+	border: 1px solid black;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	-moz-border-radius-topright: 10px;
+}
+
+.Menu .Title {
+	background-color: black;
+	padding: 3px 3px 3px 3px;
+	color: white;
+	font-weight: bold;
+	-moz-border-radius-topright: 9px;
+}
+
+.Menu .Title a {
+	font-weight: bold;
+	color: white;
+	background-color: inherit;
+	text-decoration: underline;
+}
+
+.Menu .Title a:hover {
+	color: #ffd66e;
+}
+
+.Menu .Body ul {
+	margin: 2px 3px 2px 3px;
+	padding-left: 20px;
+}
+
+.Menu .Body ul li span {
+	color: silver;
+	font-size: 8pt;
+}
+
+.Menu a {
+	text-decoration: none;
+}
+
+.Menu a:hover {
+	text-decoration: underline;
+}
+
+.Menu span {
+	clear: both;
+}
+
+.Menu .Selected {
+	color: red;
+	font-weight: bold;
+}
+
+/* ------------------------------------------ */
+
+.Listing {
+	padding-top: 5px;
+	text-align: center;
+}
+
+.Listing input[type=text] {
+	border: 1px solid gray;
+	text-align: center;
+}
+
+.Listing input[type=submit] {
+	background-color: #e9e9e9;
+	border: 1px solid gray;
+	font-weight: bold;
+}
+
+.Listing input[type=submit]:hover {
+	background-color: #e3ffe3;
+}
+
+.Listing .Box {
+	background-color: #f1f1f1;
+	border: 1px solid silver;
+	padding: 8px;
+	margin: 0 5px 0 5px;
+	-moz-border-radius: 10px;
+}
+
+.Listing a {
+	color: white;
+	font-weight: bold;
+	border: 1px solid silver;
+	background-color: gray;
+	padding: 2px 10px 2px 10px;
+	margin: 0 5px 0 5px;
+	text-decoration: none;
+}
+
+.Listing .Fake {
+	color: silver;
+	font-weight: bold;
+	border: 1px solid silver;
+	background-color: gray;
+	padding: 2px 10px 2px 10px;
+	margin: 0 5px 0 5px;
+}
+
+.Listing a:hover {
+	color: black;
+	background-color: #ffdddd;
+}
+
+/* ------------------------------------------ */
+
+#List {
+	margin-left: 220px;
+	padding-right: 15px;
+}
+
+/* ------------------------------------------ */
+
+#ArticleContent {
+	margin: 0 15px 0 220px;
+	padding: 5px 10px 10px 10px;
+	background-color: white;
+	border-left: 1px solid silver;
+	border-bottom: 1px solid silver;
+	-moz-border-radius-topright: 30px;
+}
+
+#ArticleContent .Info {
+	padding-bottom: 15px;
+}
+
+/* ------------------------------------------ */
+
+.Article {
+	background-color: #f1f1f1;
+	border-left: 2px solid silver;
+	border-bottom: 2px solid silver;
+	margin-bottom: 15px;
+	-moz-border-radius-topright: 30px;
+}
+
+.Article .Info {
+	background-color: #f9f9f9;
+	padding: 5px;
+	border-bottom: 1px solid silver;
+	font-size: 8pt;
+}
+
+.Article .Text {
+	padding: 5px;
+	background-color: #f1f1f1;
+	text-align: justify;
+}
+
+.Article h3 {
+	padding: 5px;
+}

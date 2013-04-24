@@ -1,0 +1,21 @@
+Changes in version 0.2.3:
+* support for Opera 9.50
+
+Changes in version 0.2.2:
+* bug fix of articles ordered by date
+* minor changes in CSS
+
+Changes in version 0.2.1:
+* articles ordered by date
+* minor changes in doc/README
+
+Changes in version 0.2:
+* added RELAX-NG schemes for XML validation
+* added flags for language identification
+* changed directory structure
+* simplified JS
+* minor changes in XSL
+* extracted blog name from lang files
+
+Changes in version 0.1:
+* initial version

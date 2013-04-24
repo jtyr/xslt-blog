@@ -1,0 +1,102 @@
+LICENSE:
+--------
+This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation,
+either version 3 of the License, or (at your option) any
+later version.
+
+This program is distributed in the hope that it will be
+useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+PURPOSE. See the GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public
+License along with this program.  If not, see
+<http://www.gnu.org/licenses/>.
+
+
+SUPPORTED BROWSERS:
+-------------------
+* Mozilla Firefox (tested in v2.0.0.9)
+* Microsoft Internet Explorer (tested in v6, v7)
+* Opera (tested in v9.50_beta2)
+
+
+HOW TO MODIFY XSLT-BLOG:
+------------------------
+* default options are in ../xsl/Setting.xsl
+* if you want to change design (color, dimension, ...),
+  change CSS in design/css/
+* if you want to change localisation files in xml/lang
+  please respect also the white characters in the string
+  (all localisation files must containt definitions of all
+  texts)
+
+
+HOW TO CHECK VALIDATION OF XML FILES:
+-------------------------------------
+* RELAX-NG schemes for validation of all XML files are
+  located in direcotry xml/rng/
+* example for ArticleList.xml:
+  $ xmllint --noout --relaxng xml/rng/ArticleList.rng xml/ArticleList.xml
+* xmllint is part of package libxml2 (http://www.xmlsoft.org/)
+* you can use script xml/rng/checkall.sh for check all the
+  files at once
+
+COMMON INFORMATIONS:
+--------------------
+* you can use as the index (article index, category index)
+  any sequence of characters without the white characters
+* date of the article must be in the following format:
+  "dd.mm.yyyy hh:MM:ss"
+* quick links are order by value of q="N" attribute (lower
+  value have higher position)
+* if article doesn't have specified any category, it's
+  hidden (hidden article can be use in quick links menu)
+
+
+DIRECTORY STRUCTURE:
+--------------------
+design/css
+  * cascace stylesheets
+design/js
+  * JavaScript files
+design/js/jscalendar-1.0
+  * JavaScript Calendar files
+design/flags
+  * flag pictures
+doc
+  * simple documentation
+doc/gener
+  * directory with testing scripts
+doc/gener/xml 
+  * output directory for testing scripts (ArticleList.xml)
+doc/gener/xml/articles
+  * output directory for testing scripts (Article-*.xml)
+xml
+  * directory with all XML files
+xml/articles
+  * directory with all articles
+xml/articles/files
+  * here you can put you files which you are pointing from
+    articles
+xml/lang
+  * directory with all localisations
+xml/rng
+  * RELAX-NG schemes for XML validation
+xsl
+  * XSLT stylesheets
+
+
+HOMEPAGE:
+---------
+* http://xslt-blog.sourceforge.net
+
+
+BUGS:
+-----
+* if you find any bug, please report it at address:
+  http://www.sourceforge.net/projects/xslt-blog
+  in the menu: Tracker -> Bugs

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+  **********************************************************
+  ** Description: Category list definition
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+
+<category_list>
+  <category id="1" name="Linux">
+    <category id="2" name="Gentoo">
+      <category id="7" name="System"/>
+      <category id="8" name="Ebuilds"/>
+    </category>
+  </category>
+  <category id="3" name="Programming">
+    <category id="4" name="Perl"/>
+    <category id="5" name="XSLT"/>
+  </category>
+  <category id="6" name="Friends"/>
+</category_list>

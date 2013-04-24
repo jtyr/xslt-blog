@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  **********************************************************
+  ** Description: RELAX-NG scheme for validation of
+  ** files xml/articles/Article-*.xml
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="article">
+
+      <attribute name="lang">
+        <data type="language">
+          <param name="minLength">2</param>
+          <param name="maxLength">2</param>
+        </data>
+      </attribute>
+
+      <element name="title">
+        <data type="string">
+          <param name="minLength">1</param>
+          <param name="maxLength">255</param>
+        </data>
+      </element>
+
+      <element name="text">
+        <ref name="anycontent"/>
+      </element>
+
+    </element>
+  </start>
+
+  <define name="anycontent">
+    <mixed>
+      <zeroOrMore>
+        <choice>
+          <attribute>
+            <anyName/>
+          </attribute>
+          <ref name="any"/>
+        </choice>
+      </zeroOrMore>
+    </mixed>
+  </define>
+
+  <define name="any">
+    <element>
+      <anyName/>
+      <ref name="anycontent"/>
+    </element>
+  </define>
+
+</grammar>

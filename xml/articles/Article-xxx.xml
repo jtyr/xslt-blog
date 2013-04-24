@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<article lang="cs">
+	<title>Article X</title>
+	<text>
+	    Nějaký text v čestině. U tohoto článku jsem nastavil jazyk na čestínu, takže by to mělo zobrazit českou vlajku, pokud je zvolený jiný jazyk prostředí než čeština.
+	</text>
+</article>

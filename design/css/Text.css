@@ -1,0 +1,56 @@
+/*
+  **********************************************************
+  ** Description: Text content stylesheet
+  **
+  ** (c) Jiri Tyr 2007-2008
+  **********************************************************
+*/
+
+.Text {
+	text-align: justify;
+}
+
+.Text img {
+	padding: 3px;
+	border: 1px solid silver;
+}
+
+.Text ul {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.Text pre {
+	font-family: "Courier New",Courier,monospace;
+	border: 1px solid silver;
+	background-color: #fffddd;
+	padding: 3px;
+        margin: 0;
+	width: 99%;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.Text code {
+	font-family: "Courier New",Courier,monotype;
+}
+
+.Text .Nob {
+	padding: 0px;
+	border: 0;
+}
+
+.Text .p {
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+.Text .center {
+	text-align: center;
+}
+
+.Text .title {
+        font-size: 12pt;
+	font-weight: bold;
+	padding-bottom: 5px;
+}

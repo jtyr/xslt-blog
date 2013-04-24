@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!--
+  **********************************************************
+  ** Description: Main page of the XSLT-Blog
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>XSLT-Blog</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<link media="all" href="./design/js/jscalendar-1.0/calendar-blue.css" type="text/css" rel="stylesheet"/>
+	<link media="all" href="./design/css/General.css" type="text/css" rel="stylesheet"/>
+	<link media="all" href="./design/css/Calendar.css" type="text/css" rel="stylesheet"/>
+	<link media="all" href="./design/css/Text.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="www.w3c.org" onload="transformDone()">
+	<script type="text/javascript" src="./design/js/Global.js"></script>
+	<script type="text/javascript" src="./design/js/UrlParser.js"></script>
+	<script type="text/javascript" src="./design/js/Cookies.js"></script>
+	<script type="text/javascript" src="./design/js/Ajax.js"></script>
+	<script type="text/javascript" src="./design/js/Xslt.js"></script>
+	<script type="text/javascript" src="./design/js/Calendar.js"></script>
+	<script type="text/javascript" src="./design/js/BrowserDetect.js"></script>
+	<script type="text/javascript" src="./design/js/jscalendar-1.0/calendar.js"></script>
+	<script type="text/javascript" src="./design/js/jscalendar-1.0/calendar-setup.js"></script>
+
+	<div id="Page">
+		<div id="Done">0</div>
+		<div id="Target">
+			<br/>
+			<noscript><div class="Center Bold">This web page uses JavaScript. Please enable JavaScript to see the full page.</div></noscript>
+			<div id="Wait">Please wait...</div>
+			<div id="Cook">This web page uses Cookies. Please enable Cookies to see the full page.</div>
+			<div id="Xslt"><span class="Bold">Your browser is not supported.</span><br/><span class="Italic">Please use <a href="http://www.mozilla.org/firefox" rel="external">Mozilla Firefox</a> or <a href="http://www.microsoft.com" rel="external">Microsoft Internet Explorer</a> or you can try to <a href="#" onclick="setCookie('continue', 1); showContent();">continue</a>.</span></div>
+			<br/>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	<!--
+		function getData() {
+			var category = queryString('category');
+			var page = queryString('page');
+			var lang = queryString('lang');
+			var date = queryString('date');
+
+			if (lang != 'false') {
+				var d = new Date();
+				var d2 = new Date(d.getTime()+(60*60*24*365*1000));
+				setCookie('lang', lang, d2);
+			} else if (existsCookie('lang')) {
+				lang = getCookie('lang');
+			}
+			
+
+			// if defined lang, then set new  cal_lang
+			if (lang) {
+				// check if lang is supported by jscalendar
+		    		for (var i=0; i<calendar_langs.length; i++) {
+					if (calendar_langs[i] == lang) {
+						cal_lang = lang;
+						break;
+					}
+				}
+			}
+			// check if the current cal_lang have utf8 version
+			for (var i=0; i<calendar_langs_utf8.length; i++) {
+				if (cal_lang == calendar_langs_utf8[i]) {
+					cal_lang = cal_lang+'-utf8';
+					break;
+				}
+			}
+
+			if (category == 'false') {
+				category = 0;
+			}
+			if (page == 'false') {
+				page = 1;
+			}
+
+			Initialize('Target', './xml/ArticleList.xml', './xsl/ArticleList.xsl');
+			SetParam('page', page);
+			SetParam('category', category);
+
+			if (lang != 'false') {
+				SetParam('lang', lang);
+			}
+
+			if (!isNaN(date)) {
+				SetParam('date', date);
+			}
+
+			Transform('Done');
+		}
+
+		function transformDone() {
+			if (getBrowserObject('Done').innerHTML == '0') {
+				setTimeout("transformDone();", 200);
+			} else {
+				// load default calendar language file
+				loadCalLang();
+
+				// redefine anchors for external links
+				// run all scripts
+				setTimeout("externalLinks();runScripts('Target');", 200);
+			}
+		}
+
+		isSupported();
+	-->
+	</script>
+</body>
+</html>

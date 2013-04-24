@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!--
+  **********************************************************
+  ** Description: Main page of the XSLT-Blog
+  **
+  ** (c) Jiri Tyr 2007
+  **********************************************************
+  -->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>XSLT-Blog</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<link media="all" href="./design/css/General.css" type="text/css" rel="stylesheet"/>
+	<link media="all" href="./design/css/Text.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="www.w3c.org" onload="transformDone()">
+	<script type="text/javascript" src="./design/js/Global.js"></script>
+	<script type="text/javascript" src="./design/js/Cookies.js"></script>
+	<script type="text/javascript" src="./design/js/Xslt.js"></script>
+	<script type="text/javascript" src="./design/js/UrlParser.js"></script>
+	<script type="text/javascript" src="./design/js/BrowserDetect.js"></script>
+
+	<div id="Page">
+		<div id="Done">0</div>
+		<div id="Target">
+			<br/>
+			<noscript><div class="Center Bold">This web page uses JavaScript. Please enable JavaScript to see the full page.</div></noscript>
+			<div id="Wait">Please wait...</div>
+			<div id="Cook">This web page uses Cookies. Please enable Cookies to see the full page.</div>
+			<div id="Xslt"><span class="Bold">Your browser is not supported.</span><br/><span class="Italic">Please use <a href="http://www.mozilla.org/firefox" rel="external">Mozilla Firefox</a> or <a href="http://www.microsoft.com" rel="external">Microsoft Internet Explorer</a> or you can try to <a href="#" onclick="setCookie('continue', 1); showContent();">continue</a>.</span></div>
+			<br/>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	<!--
+		function getData() {
+			var category = queryString('category');
+			var page = queryString('page');
+			var article = queryString('article');
+			var lang = queryString('lang');
+			var date = queryString('date');
+
+			if (lang != 'false') {
+				var d = new Date();
+				var d2 = new Date(d.getTime()+(60*60*24*365*1000));
+				setCookie('lang', lang, d2);
+			} else if (existsCookie('lang')) {
+				lang = getCookie('lang');
+			}
+
+			if (category == 'false') {
+				category = 0;
+			}
+			if (page == 'false') {
+				page = 1;
+			}
+
+			Initialize('Target', './xml/articles/Article-'+article+'.xml', './xsl/Article.xsl');
+			SetParam('page', page);
+			SetParam('category', category);
+			SetParam('article', article);
+			if (lang != 'false') {
+				SetParam('lang', lang);
+			}
+			if (!isNaN(date)) {
+				SetParam('date', date);
+			}
+			Transform('Done');
+		}
+
+		function transformDone() {
+			if (getBrowserObject('Done').innerHTML == '0') {
+				setTimeout("transformDone();", 200);
+			} else {
+				// redefine anchors for external links
+				externalLinks();
+
+				// run all scripts
+				runScripts('Target');
+			}
+		}
+
+		showContent();
+	-->
+	</script>
+</body>
+</html>

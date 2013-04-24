@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<article lang="en">
+	<title>Blender 2.42</title>
+	<text>
+
+<abstract>
+	<p>
+		I guess, that everybody has noticed, that new version of <a href="http://www.blender.org" rel="external">Blender</a> was released. It seems, that some bug fix release will be neccessary soon. It will go out probably in Sunday and after this date ... verse blender will go to main cvs tree. Finaly! :-) I still have to improved, fixed and implemented many things. :-(
+	</p>
+
+	<p style="text-align: center;">
+		<a href="http://www.blender.org" rel="external"><img src="./xml/articles/files/splash_242.jpg"/></a>
+	</p>
+</abstract>
+	
+	</text>
+</article>

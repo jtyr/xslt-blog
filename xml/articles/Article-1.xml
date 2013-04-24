@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<article lang="en">
+	<title>Article 1</title>
+	<text>
+The translate function returns the first argument string with occurrences of characters in the second argument string replaced by the character at the corresponding position in the third argument string. For example, translate("bar","abc","ABC") returns the string BAr. If there is a character in the second argument string with no character at a corresponding position in the third argument string (because the second argument string is longer than the third argument string), then occurrences of that character in the first argument string are removed. For example, translate("--aaa--","abc-","ABC") returns "AAA". If a character occurs more than once in the second argument string, then the first occurrence determines the replacement character. If the third argument string is longer than the second argument string, then excess characters are ignored.
+	</text>
+</article>
